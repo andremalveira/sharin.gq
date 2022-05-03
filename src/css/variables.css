@@ -1,0 +1,64 @@
+:root {
+  --border:  #768390;
+  --font-primary:  #adbac7;
+  --font-second:  #768390;
+  --font-third:  #e5534b;
+  --btn-second:  #347d39;
+  --btn-second-hover:  #46954a;
+  --btn-second-border-hover:  #57ab5a;
+  --btn-third:  #c93c37;
+  --btn-third-border:  #e5534b;
+  --link-primary:  #539bf5;
+  --bg-warn:  #ae7c1426;
+  --bg-warn-border:  #ae7c1466;
+  --bg-info:  linear-gradient(#4184e426, #4184e426);
+  --bg-info-border:  #4184e466;
+  --blur:  blur(0.25rem);
+}
+
+
+[theme="dark"] {
+  --bg-primary: #121212;
+  --bg-second: #151515;
+  --bg-third: #1d1d1d;
+  --bg-4:  rgb(34 39 46);
+
+  --font-primary: #FFFFFF;
+  --font-second: #C4C4C4;
+
+  --cyan: #00D2DF;
+  --pink: #fd4299;
+  --purple: #9358F7;
+
+  --gradient-pink: linear-gradient(141deg, #D24074 1%, #6518B4 100%);
+  --gradient-purple: linear-gradient(141deg, #9358F7 1%, #10D7E2 100%);
+
+  --change-theme-delay: 0.3s;
+
+  --border: #333;
+  --bg-on-bg-image: #00000066;
+}
+
+[theme="light"] {
+  --bg-primary: #FFFFFF;
+  --bg-second: #e8feff;
+  --bg-third: #f4e4fe;
+
+  --font-primary: #829cfe;
+  --font-second: #b38bfa;
+
+  --border: #616e6f;
+  --bg-on-bg-image: #263b3f66;
+}
+
+[theme="github-dark"] {
+  --bg-primary:  rgb(34 39 46);
+  --bg-primary-transparent:  rgb(34 39 46 / 50%);
+  --bg-second:  rgb(45 51 59);
+  --bg-second-transparent:  rgb(45 51 59 / 50%);
+  --btn-primary:  rgb(55 62 71);
+  --btn-primary-transparent:  rgb(55 62 71 / 50%);
+  --btn-primary-hover:  #444c56;
+  --border:  #768390;
+  --font-primary:  #adbac7;
+}
