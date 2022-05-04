@@ -1,0 +1,138 @@
+
+
+body {
+  background: var(--bg-second);
+  color: var(--font-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#home header {
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+#home header #IconTranslate {
+  padding: 0.3rem;
+  color: var(--font-second);
+  transition: ease 0.2s;
+  border-radius: 0.4rem;
+  display: flex;
+}
+#home header #IconTranslate:hover {
+  background: #4184e426;
+  color: var(--link-primary);
+}
+#home header #translate-options {
+  display:flex;
+  flex-direction:column;
+  font-size:1rem;
+  transition: ease 0.2s;
+}
+#home header #translate-options span {
+  padding:0.4rem 1rem;
+  border-radius: 0.2rem;
+}
+#home header #translate-options span:hover {
+  background: #4184e426;
+
+}
+
+
+#home .container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+#home main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+div#url-example {
+  color: #ce915b;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+}
+div#url-example span {
+  color: #adbac7;
+}
+
+b9cdcfe {
+  color: #9cdcfe
+}
+
+bg {
+  background-color: var(--bg-4);
+  border-radius: 0.4rem;
+  padding: 0.1rem 0.2rem;
+}
+
+
+form.generateurl {
+  padding: 2rem 0;
+  & input {
+    width: 100%;
+    height: max-content;
+
+    &.required {
+      box-shadow: 0px 0px 0px 2px var(--btn-third-border);
+    }
+  }
+  & textarea {
+    width: 100%;
+    height: 10rem;
+  }
+  & .row {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  & .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  & button[type="button"]{
+    transition: ease 0.2s;
+    background: var(--btn-second);
+    box-shadow: 0px 0px 0px 2px var(--border);
+    color: #fff;
+    &:hover {
+      background-color: var(--btn-second-hover);
+      box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+
+
+  @media (max-width: 420px) {
+    & .row {
+      flex-direction: column;
+    }
+  }
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 420px) {
+  div#url-example {
+    font-size: 1rem;
+  }
+  #params-table  {
+    width: calc(100vw - 4rem);
+  }
+  #params-table .ast-table {
+    overflow: overlay;
+  }
+  #params-table .ast-table table {
+    width: max-content;
+    padding: 0 0 1rem 0;
+  }
+}

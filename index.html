@@ -29,6 +29,23 @@
         <label data-text="text_url_example"></label>
         <div id="url-example">https://sharin.gq?<bg><b9cdcfe id="title_params_u">u</b9cdcfe>=https://site.com<span id="title_params_e">&</span><b9cdcfe id="title_params_t">t</b9cdcfe>=title</bg></div>
         <div id="params-table"></div>
+
+        <form action="" class="generateurl">
+          <div class="row">
+            <div class="col">
+              <input data-name="title" type="text" placeholder="title">
+              <input data-name="url" type="text" placeholder="https://yourlink.com">
+              <input data-name="image" type="text" placeholder="https://yourimage.com">
+            </div>
+            <div class="col">
+              <textarea data-name="description" placeholder="description"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <button id="generateButton" type="button">Generate URL</button>
+          </div>
+        </form>
+        <textarea data-name="generated-url"></textarea>
       </main>
     </div>
   </section>
@@ -40,5 +57,6 @@
   <script src="src/js/lib/bootstrap.icons.js"></script>
   <script src="src/js/lib/astronaut.table.js"></script>
   <script src="src/js/script.js"></script>
+  <script src="src/js/generate.url.js"></script>
 </body>
 </html>
