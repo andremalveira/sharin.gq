@@ -171,7 +171,7 @@ let table = {
             var name = param.split(':')[0],
                 value = param.split(':')[1];
             if(name == 'width'){
-              prop = `style="width:${value};"`
+              prop = `width:${value};`
             } else if(name == 'class') {
               prop = `class="${value}"`
             } else if(name == 'attr') {
@@ -187,9 +187,7 @@ let table = {
       }
       theadHTML += `<th 
       ${
-        (borderInside) ? `style="
-        ${(borderInX) ? `border-bottom: solid ${borderInSize} ${borderInColor};` : ''} 
-        ${(borderInY) ? `border-right: solid ${borderInSize} ${borderInColor};` : ''}"` : ''
+        (borderInside || prop) ? `style="${prop}${(borderInX) ? `border-bottom: solid ${borderInSize} ${borderInColor};` : ''} ${(borderInY) ? `border-right: solid ${borderInSize} ${borderInColor};` : ''}"` : ''
       }
       ${prop} >${th}</th>\n`
     });

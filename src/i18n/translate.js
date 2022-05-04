@@ -5,6 +5,10 @@ const translate = {
     title_params_u: "parâmetro url",
     title_params_t: "parâmetro title",
     title_params_e: "Sinal de & para concatenar com um próximo parâmetro",
+    table_desc_u: "URL/Link que deseja compartilhar",
+    table_desc_t: "Título da pré visualização",
+    table_desc_d: "Descrição da pré visualização",
+    table_desc_i: "URL/Link da imagem da pré visualização",
   }, 
   "en-us" : {
     slogan: "Custom preview link.",
@@ -12,6 +16,10 @@ const translate = {
     title_params_u: "url parameter",
     title_params_t: "title parameter",
     title_params_e: "& sign to concatenate with a next parameter",
+    table_desc_u: "URL/Link you want to share",
+    table_desc_t: "Preview title",
+    table_desc_d: "Description of preview",
+    table_desc_i: "Preview Image URL/Link",
   }
 }
 
@@ -38,6 +46,5 @@ document.querySelectorAll('[data-text]').forEach(e => {
 document.querySelectorAll('[data-title]').forEach(e => {
   e.setAttribute('title', text[e.dataset.title])
 })
-
 
 

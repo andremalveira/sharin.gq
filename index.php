@@ -31,10 +31,9 @@
 
 
   <title>Redirecting...</title>
-
-  <script>
-    location.search && window.location.replace('<?php echo $url;?>')
-  </script>
+  <?php if($url) {
+    echo '<script>window.location.replace('.$url.')</script>';
+  }?>
 
 </head>
   <style>body {background: #222;color: #eee;}</style>

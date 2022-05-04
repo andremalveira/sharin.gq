@@ -52,11 +52,11 @@
 }
 
 [theme="github-dark"] {
-  --bg-primary:  rgb(34 39 46);
+  --bg-primary:  #22272e;
   --bg-primary-transparent:  rgb(34 39 46 / 50%);
   --bg-second:  rgb(45 51 59);
   --bg-second-transparent:  rgb(45 51 59 / 50%);
-  --btn-primary:  rgb(55 62 71);
+  --btn-primary:  #373e47;
   --btn-primary-transparent:  rgb(55 62 71 / 50%);
   --btn-primary-hover:  #444c56;
   --border:  #768390;

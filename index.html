@@ -9,25 +9,36 @@
   <link rel="stylesheet" href="src/css/variables.css">
   <link rel="stylesheet" href="src/css/global.css">
   <link rel="stylesheet" href="src/css/style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
 </head>
 <body>
   
   <section id="home">
     <div class="container">
       <header>
-        <h1>🔗 sharin.gq</h1>
-        <p data-text="slogan"></p>
+        <div class="l-side">
+          <h1>🔗 sharin.gq</h1>
+          <p data-text="slogan"></p>
+        </div>
+        <div class="r-side">
+          <div id="IconTranslate" size="20"></div>
+        </div>
       </header>
       <main>
         <label data-text="text_url_example"></label>
-        <div id="url-example">https://sharin.gq?<bg><b9cdcfe data-title="title_params_u">u</b9cdcfe>=https://site.com<span data-title="title_params_e">&</span><b9cdcfe data-title="title_params_t">t</b9cdcfe>=title</bg></div>
+        <div id="url-example">https://sharin.gq?<bg><b9cdcfe id="title_params_u">u</b9cdcfe>=https://site.com<span id="title_params_e">&</span><b9cdcfe id="title_params_t">t</b9cdcfe>=title</bg></div>
         <div id="params-table"></div>
       </main>
     </div>
   </section>
 
-  <script src="src/i18n//translate.js"></script>
-  <script src="src/js//lib/astronaut.table.js"></script>
+  <!-- Production -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="src/i18n/translate.js"></script>
+  <script src="src/js/lib/bootstrap.icons.js"></script>
+  <script src="src/js/lib/astronaut.table.js"></script>
   <script src="src/js/script.js"></script>
 </body>
 </html>
