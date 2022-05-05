@@ -31,6 +31,77 @@ let table = {
       }
     }
   },
+  copy(value, selector)  {
+    var selector = (selector) ? selector : document.body
+
+    function clipboard(textToCopy) {
+      if (navigator.clipboard && window.isSecureContext) {
+          // navigator clipboard api method'
+          return navigator.clipboard.writeText(textToCopy);
+      } else {
+          // text area method
+          let textArea = document.createElement("textarea");
+          textArea.value = textToCopy;
+          // make the textarea out of viewport
+          textArea.style.position = "fixed";
+          textArea.style.left = "-999999px";
+          textArea.style.top = "-999999px";
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          return new Promise((res, rej) => {
+              // here the magic happens
+              document.execCommand('copy') ? res() : rej();
+              textArea.remove();
+          });
+      }
+    }
+    clipboard(value)
+    .then(() => {
+      astronaut.warning({text: 'Copied!', selector})
+    })
+    .catch(err => {
+      astronaut.warning({text: 'Error when Copying!', selector})
+    })
+  },
+  warning(params)  {
+    var text = (params.text) ? params.text : false, selector = (params.selector) ? params.selector : document;
+    this.insert.css(`
+/*Astronaut Library.js - Warning*/
+.ast-warning {
+  position: absolute;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.3rem;
+  background: #2d333b;
+  color: #eee;
+  box-shadow: 0px 0px 0px 0.03rem #00000030;
+  animation: show_ast_warning 0.3s ease forwards;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  z-index: 1;
+}
+@keyframes show_ast_warning {
+  0% {opacity: 0;transform: translate(-50%, -50%) scale(0.7);}
+  40% {opacity: 1;transform: translate(-50%, -50%) scale(1.2);}
+  100% {opacity: 1;transform: translate(-50%, -50%) scale(1);}
+}
+@keyframes hide_ast_warning {
+  0% {opacity: 1;transform: translate(-50%, -50%) scale(1);}
+  40% {opacity: 1;transform: translate(-50%, -50%) scale(1.2);}
+  100% {opacity: 0;transform: translate(-50%, -50%) scale(0.7);}
+}
+    `, 'warning')
+   
+    selector.insertAdjacentHTML('beforeend', `<div class="ast-warning">${text}</div>`)
+    var astWarn = selector.querySelector('.ast-warning');
+    setTimeout(() => {
+      astWarn.style.animationName='hide_ast_warning'
+      setTimeout(() => {
+        astWarn.remove()
+      }, 500); 
+    }, 1500);
+  },
   table(params) {
     var selector  = (params.selector)   ? params.selector   : false,
         thead     = (params.thead)      ? params.thead      : false,

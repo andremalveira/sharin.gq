@@ -70,11 +70,10 @@ bg {
 
 
 form.generateurl {
-  padding: 2rem 0;
+  padding-top: 2rem;
   & input {
     width: 100%;
     height: max-content;
-
     &.required {
       box-shadow: 0px 0px 0px 2px var(--btn-third-border);
     }
@@ -82,6 +81,13 @@ form.generateurl {
   & textarea {
     width: 100%;
     height: 10rem;
+  }
+  & input, textarea {
+    background: var(--bg-third);
+    transition: ease 0.3s;
+    &:focus {
+      box-shadow: 0px 0px 0px 2px var(--pink);
+    }
   }
   & .row {
     display: flex;
@@ -95,19 +101,7 @@ form.generateurl {
     gap: 1.5rem;
   }
 
-  & button[type="button"]{
-    transition: ease 0.2s;
-    background: var(--btn-second);
-    box-shadow: 0px 0px 0px 2px var(--border);
-    color: #fff;
-    &:hover {
-      background-color: var(--btn-second-hover);
-      box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
-    }
-    &:active {
-      transform: scale(0.95);
-    }
-  }
+
 
 
 
@@ -118,7 +112,46 @@ form.generateurl {
   }
 }
 
+button[type="button"]{
+  transition: ease 0.2s;
+  background: var(--btn-second);
+  color: #fff;
+  box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
+  user-select: none;
+  &:hover {
+    background-color: var(--btn-second-hover);
+    box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
 
+#result {
+  display: none;
+  &.show {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  #copyUrl {
+    background: var(--bg-info);
+    box-shadow: 0px 0px 0px 2px var(--bg-info-border);
+    width: max-content;
+    margin-left: auto;
+  }
+}
+textarea[data-name="generated-url"]{
+  width: 100%;
+  min-height: 5rem;
+  background: var(--bg-third);
+  transition: ease 0.3s;
+  user-select: none;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 2px var(--bg-info-border);
+  }
+}
 /*RESPONSIVE*/
 
 @media (max-width: 420px) {

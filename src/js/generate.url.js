@@ -12,19 +12,37 @@ generateButton.addEventListener('click', () => {
 
   if(params.u) {
     var queryString = Object.keys(params).map((key) => {
-      return params[key] && encodeURIComponent(key) + '=' + encodeURIComponent(params[key])
+      //params[key] && encodeURIComponent(key) + '=' + encodeURIComponent(params[key])
+      return params[key] && key + '=' + params[key]
     }).join('&');
   
-  
-    generated_url.innerHTML = `https://sharin.gq?${queryString}`
+    document.querySelector('form.generateurl')
+
+    document.querySelector('#result').classList.add('show');
+    document.querySelector('#result .generate-url').innerHTML= `
+      <textarea data-name="generated-url">https://sharin.gq?${queryString}</textarea>
+    `
+
+
+
+
+
   } else {
     get('url').classList.add('required')
-    get('url').addEventListener('input')
+    get('url').addEventListener('input', removeRequired)
   }
 
 })
 
-
-function removeRequired(){
-
+get('url').addEventListener('focus', removeRequired)
+function removeRequired(e){
+  e.target.classList.remove('required')
+  get('url').removeEventListener('input', removeRequired)
 }
+
+
+copyUrl.addEventListener('click', () => {
+  let textarea = document.querySelector('#result .generate-url textarea')
+
+  astronaut.copy(textarea.value)
+})

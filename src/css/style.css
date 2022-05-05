@@ -92,7 +92,7 @@ bg {
 }
 
 form.generateurl {
-  padding: 2rem 0;
+  padding-top: 2rem;
 }
 
 form.generateurl input {
@@ -110,6 +110,17 @@ form.generateurl input.required {
 form.generateurl textarea {
   width: 100%;
   height: 10rem;
+}
+
+form.generateurl input, form.generateurl textarea {
+  background: var(--bg-third);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+form.generateurl input:focus, form.generateurl textarea:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px var(--pink);
+          box-shadow: 0px 0px 0px 2px var(--pink);
 }
 
 form.generateurl .row {
@@ -134,26 +145,6 @@ form.generateurl .col {
   gap: 1.5rem;
 }
 
-form.generateurl button[type="button"] {
-  -webkit-transition: ease 0.2s;
-  transition: ease 0.2s;
-  background: var(--btn-second);
-  -webkit-box-shadow: 0px 0px 0px 2px var(--border);
-          box-shadow: 0px 0px 0px 2px var(--border);
-  color: #fff;
-}
-
-form.generateurl button[type="button"]:hover {
-  background-color: var(--btn-second-hover);
-  -webkit-box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
-          box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
-}
-
-form.generateurl button[type="button"]:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-
 @media (max-width: 420px) {
   form.generateurl .row {
     -webkit-box-orient: vertical;
@@ -161,6 +152,72 @@ form.generateurl button[type="button"]:active {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+button[type="button"] {
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+  background: var(--btn-second);
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
+          box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+button[type="button"]:hover {
+  background-color: var(--btn-second-hover);
+  -webkit-box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
+          box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
+}
+
+button[type="button"]:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#result {
+  display: none;
+}
+
+#result.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.8rem;
+}
+
+#result #copyUrl {
+  background: var(--bg-info);
+  -webkit-box-shadow: 0px 0px 0px 2px var(--bg-info-border);
+          box-shadow: 0px 0px 0px 2px var(--bg-info-border);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+}
+
+textarea[data-name="generated-url"] {
+  width: 100%;
+  min-height: 5rem;
+  background: var(--bg-third);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+textarea[data-name="generated-url"]:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px var(--bg-info-border);
+          box-shadow: 0px 0px 0px 2px var(--bg-info-border);
 }
 
 /*RESPONSIVE*/

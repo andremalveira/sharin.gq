@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="src/css/style.css">
 
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
+  
 </head>
 <body>
   
@@ -33,19 +34,22 @@
         <form action="" class="generateurl">
           <div class="row">
             <div class="col">
-              <input data-name="title" type="text" placeholder="title">
-              <input data-name="url" type="text" placeholder="https://yourlink.com">
-              <input data-name="image" type="text" placeholder="https://yourimage.com">
+              <input data-name="title" type="text" placeholder="Title">
+              <input data-name="url" type="text" placeholder="URL">
+              <input data-name="image" type="text" placeholder="Image URL">
             </div>
             <div class="col">
-              <textarea data-name="description" placeholder="description"></textarea>
+              <textarea data-name="description" placeholder="Description"></textarea>
             </div>
           </div>
           <div class="row">
             <button id="generateButton" type="button">Generate URL</button>
           </div>
         </form>
-        <textarea data-name="generated-url"></textarea>
+        <div id="result">
+          <button type="button" id="copyUrl">Copy URL</button>
+          <div class="generate-url"></div>
+        </div>
       </main>
     </div>
   </section>
