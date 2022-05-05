@@ -2,6 +2,8 @@ const translate = {
   "pt-br" : {
     slogan: "Link de visualização personalizado.",
     text_url_example: "Exemplo da URL",
+    text_about: "Sobre",
+    text_create_by: "Desenvolvido por",
     title_params_u: "parâmetro url",
     title_params_t: "parâmetro title",
     title_params_e: "Sinal de & para concatenar com um próximo parâmetro",
@@ -13,6 +15,8 @@ const translate = {
   "en-us" : {
     slogan: "Custom preview link.",
     text_url_example: "URL Example",
+    text_about: "About",
+    text_create_by: "Developer by",
     title_params_u: "url parameter",
     title_params_t: "title parameter",
     title_params_e: "& sign to concatenate with a next parameter",

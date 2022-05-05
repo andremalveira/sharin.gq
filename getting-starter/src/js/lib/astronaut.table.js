@@ -69,7 +69,7 @@ let table = {
     this.insert.css(`
 /*Astronaut Library.js - Warning*/
 .ast-warning {
-  position: absolute;
+  position: fixed;
   padding: 0.2rem 0.8rem;
   border-radius: 0.3rem;
   background: #2d333b;

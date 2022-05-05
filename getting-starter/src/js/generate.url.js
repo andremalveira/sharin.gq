@@ -43,6 +43,5 @@ function removeRequired(e){
 
 copyUrl.addEventListener('click', () => {
   let textarea = document.querySelector('#result .generate-url textarea')
-
   astronaut.copy(textarea.value)
 })

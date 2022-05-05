@@ -1,8 +1,8 @@
 <?php
-  $url = $_GET['u'] ?? null;
-  $title = $_GET['t'] ?? null;
-  $description = $_GET['d'] ?? null;
-  $image = $_GET['i'] ?? null;
+  $url          = $_GET['u'] ?? $_GET['url']          ?? null;
+  $title        = $_GET['t'] ?? $_GET['title']        ?? null;
+  $description  = $_GET['d'] ?? $_GET['description']  ?? null;
+  $image        = $_GET['i'] ?? $_GET['image']        ?? null;
 
 
 ?>
@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- meta to shared --> 
-
+  <meta property="og:site_name"        content="astlibjs.ga"> 
   <!-- FACEBOOK -->
   <meta property="og:url" content="<?php echo $url;?>">
   <meta property="og:title" content="<?php echo $title;?>">

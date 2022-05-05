@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="src/css/variables.css">
   <link rel="stylesheet" href="src/css/global.css">
   <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/loading.css">
 
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
-  
+
+  <script src="src/js/lib/loading.js"></script>
 </head>
 <body>
   
@@ -19,8 +21,14 @@
     <div class="container">
       <header>
         <div class="l-side">
-          <h1>🔗 sharin.gq</h1>
-          <p data-text="slogan"></p>
+          <div class="logo">
+            <h1>sharin.gq</h1>
+            <p data-text="slogan"></p>
+          </div>
+          <div class="divider"></div>
+          <div class="menu">
+            <div data-modal="about" class="to-modal" data-text="text_about"></div>
+          </div>
         </div>
         <div class="r-side">
           <div id="IconTranslate" size="20"></div>
@@ -51,12 +59,14 @@
           <div class="generate-url"></div>
         </div>
       </main>
+      <footer><span data-text="text_create_by"></span> <a href="https://github.com/andremalveira" target="_blank"> @andremalveira</a></footer>
     </div>
   </section>
 
+  <script>loading.auto(document.body)</script>
   <!-- Production -->
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="src/js/lib/tippy/popper.js"></script>
+  <script src="src/js/lib/tippy/tippy.js"></script>
   <script src="src/i18n/translate.js"></script>
   <script src="src/js/lib/bootstrap.icons.js"></script>
   <script src="src/js/lib/astronaut.table.js"></script>
