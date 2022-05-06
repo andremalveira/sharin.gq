@@ -69,7 +69,17 @@ body {
           transform: translate(-50%, 0%);
 }
 
-#home header #IconTranslate {
+#home header .r-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+#home header :is(#IconTranslate, #GithubIcon) {
   padding: 0.3rem;
   color: var(--font-second);
   -webkit-transition: ease 0.2s;
@@ -80,7 +90,7 @@ body {
   display: flex;
 }
 
-#home header #IconTranslate:hover {
+#home header :is(#IconTranslate, #GithubIcon):hover {
   background: #4184e426;
   color: var(--link-primary);
 }
@@ -301,6 +311,15 @@ footer a:hover {
   cursor: pointer;
 }
 
+footer span, footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 footer .center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -354,8 +373,48 @@ footer .l-side span {
           user-select: none;
 }
 
+footer .r-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 /*RESPONSIVE*/
 @media (max-width: 420px) {
+  #home header {
+    border-bottom: solid 1px var(--border);
+    padding-bottom: 1rem;
+    margin: 1rem 0 1rem 0;
+  }
+  #home header .l-side {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #home header .l-side .logo {
+    margin-bottom: 1rem;
+  }
+  #home header .l-side .logo p {
+    font-size: 0.9rem;
+  }
+  #home header .l-side .divider {
+    margin: 0 1rem;
+  }
+  #home header .r-side {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  #home main {
+    padding: 1rem 0;
+  }
   div#url-example {
     font-size: 1rem;
   }

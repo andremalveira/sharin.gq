@@ -50,15 +50,20 @@ body {
       }
     }
   }
+  & .r-side {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
-#home header #IconTranslate {
+#home header :is(#IconTranslate, #GithubIcon) {
   padding: 0.3rem;
   color: var(--font-second);
   transition: ease 0.2s;
   border-radius: 0.4rem;
   display: flex;
 }
-#home header #IconTranslate:hover {
+#home header :is(#IconTranslate, #GithubIcon):hover {
   background: #4184e426;
   color: var(--link-primary);
 }
@@ -212,7 +217,10 @@ footer {
       cursor: pointer;
     }
   }
-
+  & span, a {
+    display: flex;
+    align-items: center;
+  }
   & .center {
     display: flex;
     justify-content: center;
@@ -242,12 +250,46 @@ footer {
       user-select: none;
     }
   }
+
+  & .r-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }
 
 
 /*RESPONSIVE*/
 
 @media (max-width: 420px) {
+  #home {
+    header {
+      border-bottom: solid 1px var(--border);
+      padding-bottom: 1rem;
+      margin: 1rem 0 1rem 0;
+      
+      & .l-side {
+        flex-direction: column;
+        & .logo {
+          margin-bottom: 1rem;
+          p {
+            font-size: 0.9rem;
+          }
+        }
+        & .divider {
+          margin: 0 1rem;
+        }
+      }
+      & .r-side {
+        height: max-content;
+      }
+  
+    }
+    & main {
+      padding: 1rem 0;
+    }
+  }
+ 
   div#url-example {
     font-size: 1rem;
   }

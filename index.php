@@ -6,7 +6,8 @@
   $site_name    = $_GET['sn'] ?? $_GET['site_name']   ?? null;
 
 ?>
-
+<!-- Author: https://github.com/andremalveira -->
+<!-- Created in May 2022 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

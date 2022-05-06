@@ -16,7 +16,7 @@ const translate = {
     slogan: "Custom preview link to share.",
     text_url_example: "URL Example",
     text_about: "About",
-    text_create_by: "Developer by",
+    text_create_by: "Developed by",
     title_params_u: "url parameter",
     title_params_t: "title parameter",
     title_params_e: "& sign to concatenate with a next parameter",

@@ -11,9 +11,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation: overlay 0.5s;
   background: #0000007d;
-  transition: ease 3s;
 }
+@keyframes overlay {
+  from {background: #00000000;}
+  to {background: #0000007d;}
+}
+
 #easyModal .modal {
   display: grid;
   grid-template-rows: 1fr;
@@ -27,7 +33,8 @@
   height: 100%;
   max-width: 70%;
   max-height: 60%;
-  background: var(--bg-4);
+  background: var(  --bg-third);
+  
   border-radius: 1rem;
   box-shadow: 0px 2px 10px 0px #00000014;
 }
@@ -94,4 +101,11 @@
   justify-content: center;
   align-items: center;
   padding: 1rem 0 ;
+}
+
+@media (max-width: 420px) {
+  #easyModal .modal {
+    max-width: 95%;
+    max-height: 95%;
+  }
 }
