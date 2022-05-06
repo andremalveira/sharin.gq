@@ -13,7 +13,7 @@ const translate = {
     table_desc_i: "URL/Link da imagem da pré visualização",
   }, 
   "en-us" : {
-    slogan: "Custom preview link.",
+    slogan: "Custom preview link to share.",
     text_url_example: "URL Example",
     text_about: "About",
     text_create_by: "Developer by",

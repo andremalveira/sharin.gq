@@ -32,3 +32,11 @@ tippy('#IconTranslate', {
   `,
   allowHTML: true,
 });
+
+
+document.querySelector('[data-modal="about"]').addEventListener('click', () => {
+
+  easyModal.open(`
+  
+  `, true)
+})

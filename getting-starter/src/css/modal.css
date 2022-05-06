@@ -1,0 +1,97 @@
+/*easyModal.js css*/
+
+#easyModal {
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0000007d;
+  transition: ease 3s;
+}
+#easyModal .modal {
+  display: grid;
+  grid-template-rows: 1fr;
+
+  opacity: 0;
+  transform: scale(0.6);
+  transition: ease 0.1s;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 70%;
+  max-height: 60%;
+  background: var(--bg-4);
+  border-radius: 1rem;
+  box-shadow: 0px 2px 10px 0px #00000014;
+}
+#easyModal.show .modal {
+  opacity: 1;
+  transform: scale(1);
+}
+#easyModal .modal .content {
+  padding: 2.5rem 2rem;
+  text-align: left;
+  overflow: overlay;
+}
+#easyModal .modal .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer !important;
+  transition: ease 0.2s;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pink);
+}
+#easyModal .modal .close:hover {
+  background: var( --bg-third);
+}
+
+.gg-close {
+  cursor: pointer !important;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 40px
+}
+.gg-close::after,
+.gg-close::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 8px;
+  left: -1px
+}
+.gg-close::after {
+  transform: rotate(-45deg)
+}
+
+
+#easyModal .modal .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 ;
+}

@@ -1,4 +1,4 @@
-const loading = {
+let loading = {
   start(e, options) {
     var bg = (options) ? options.style.bg : '',
         spinner = (options) ? options.style.spinner : ''

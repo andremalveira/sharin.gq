@@ -153,17 +153,24 @@ form.generateurl {
 }
 
 button[type="button"]{
+  cursor: pointer !important;
   transition: ease 0.2s;
   background: var(--btn-second);
   color: #fff;
   box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
   user-select: none;
+  min-width: 5rem;
   &:hover {
     background-color: var(--btn-second-hover);
     box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
   }
   &:active {
     transform: scale(0.95);
+  }
+
+  &.info {
+    background: var(--bg-info);
+    box-shadow: 0px 0px 0px 2px var(--bg-info-border);
   }
 }
 
@@ -194,15 +201,45 @@ textarea[data-name="generated-url"]{
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
+  padding: 2rem 0;
   gap: 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   a {
     color: var(--link-primary);
     &:hover {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+
+  & .center {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  & .l-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    & .ssl-seal, & span {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      align-items: center;
+      & i {
+        display: flex;
+        align-items: center;
+      }
+    }
+    & span {
+      background-color: var(--bg-third);
+      border-radius: 0.3rem;
+      padding: 0.3rem 0.6rem;
+      gap: 0.2rem;
+      user-select: none;
     }
   }
 }
@@ -223,5 +260,17 @@ footer {
   #params-table .ast-table table {
     width: max-content;
     padding: 0 0 1rem 0;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-columns: inherit;
+    padding-bottom: 1rem;
+    & .l-side {
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
   }
 }
