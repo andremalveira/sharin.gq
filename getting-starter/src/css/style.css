@@ -253,6 +253,7 @@ button[type="button"].info {
 
 #result {
   display: none;
+  position: relative;
 }
 
 #result.show {

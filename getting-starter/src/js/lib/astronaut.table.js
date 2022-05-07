@@ -69,17 +69,18 @@ let table = {
     this.insert.css(`
 /*Astronaut Library.js - Warning*/
 .ast-warning {
-  position: fixed;
+  position: absolute;
   padding: 0.2rem 0.8rem;
   border-radius: 0.3rem;
-  background: #2d333b;
-  color: #eee;
-  box-shadow: 0px 0px 0px 0.03rem #00000030;
+  background: #57ab5a;
+  color: #fff;
+  box-shadow: 0px 0px 0px 2px #46954a;
   animation: show_ast_warning 0.3s ease forwards;
   left: 50%;
   transform: translate(-50%, -50%);
   bottom: 0;
   z-index: 1;
+  font-size: 1.3rem;
 }
 @keyframes show_ast_warning {
   0% {opacity: 0;transform: translate(-50%, -50%) scale(0.7);}

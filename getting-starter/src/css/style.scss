@@ -181,6 +181,7 @@ button[type="button"]{
 
 #result {
   display: none;
+  position: relative;
   &.show {
     display: flex;
     flex-direction: column;

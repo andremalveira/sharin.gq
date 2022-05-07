@@ -13,7 +13,12 @@ generateButton.addEventListener('click', () => {
   if(params.u) {
     var queryString = Object.keys(params).map((key) => {
       //params[key] && encodeURIComponent(key) + '=' + encodeURIComponent(params[key])
-      return params[key] && encodeURIComponent(key) + '=' + encodeURIComponent(params[key])
+
+      if(params[key] && (key == 't' || key == 'd')){
+        return key + '=' + params[key].replaceAll(' ' , '%20')
+      }
+
+      return params[key] && key + '=' + params[key]
     }).join('&');
   
     document.querySelector('form.generateurl')
@@ -43,5 +48,7 @@ function removeRequired(e){
 
 copyUrl.addEventListener('click', () => {
   let textarea = document.querySelector('#result .generate-url textarea')
-  astronaut.copy(textarea.value)
+  astronaut.copy(textarea.value, document.querySelector('#result'))
 })
+
+
