@@ -47,6 +47,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
 
   <meta name="description"              content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.';?>">
   <!-- meta to shared --> 
