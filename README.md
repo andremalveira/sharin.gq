@@ -31,7 +31,11 @@ https://sharin.gq
   <img src="getting-starter/src/img/no-mtdt-1.png"/>
 </p>
 
-> - Using sharin, this would be the result:
+> - I added a random image link one, title and description per parameter.
+> - Creating a url with Sharin, this would be the result:
+```jsx
+https://sharin.gq/?u=https://site-no-metadata.com/&t=Example%20link%20no-metadatas&d=This%20is%20a%20preview%20of%20a%20url%20without %20metadata%20using%20sharin.gq%20with%20parameters&i=https%3A%2F%2Fimages4.alphacoders.com%2F118%2Fthumb-1920-1187146.jpg
+```
 
 <p align="center">
   <img src="getting-starter/src/img/mtdt-1.png"/>
