@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
   <title>sharin.gq</title>
 
   <link rel="stylesheet" href="src/css/variables.css">
@@ -14,19 +16,19 @@
   <link rel="stylesheet" href="src/css/loading.css">
   <link rel="stylesheet" href="src/css/modal.css">
 
-  <meta name="description"              content="Custom preview link to share">
+  <meta name="description"              content="Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.">
   <!-- meta to shared --> 
   <meta property="og:site_name"         content="sharin.gq"> 
   <!-- FACEBOOK -->
   <meta property="og:url"               content="https://sharin.gq">
-  <meta property="og:title"             content="Sharin">
-  <meta property="og:description"       content="Custom preview link to share">
+  <meta property="og:title"             content="Custom preview link to share">
+  <meta property="og:description"       content="Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.">
   <meta property="og:image"             content="src/img/banner.jpg">
 
 
   <!-- TWITTER -->
-  <meta name="twitter:title"            content="Sharin">
-  <meta name="twitter:description"      content="Custom preview link to share">
+  <meta name="twitter:title"            content="Custom preview link to share">
+  <meta name="twitter:description"      content="Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.">
   <meta name="twitter:image:src"        content="src/img/banner.jpg">
   <meta name="twitter:card"             content="summary_large_image">
 
@@ -48,6 +50,7 @@
           <div class="divider"></div>
           <div class="menu">
             <div data-modal="about" class="to-modal" data-text="text_about"></div>
+            <div data-modal="debuggers" class="to-modal" data-text="text_debuggers" id="Debuggers"></div>
           </div>
         </div>
         <div class="r-side">
@@ -63,16 +66,19 @@
         <form action="" class="generateurl">
           <div class="row">
             <div class="col">
-              <input data-name="title" type="text" placeholder="Title">
-              <input data-name="url" type="text" placeholder="URL">
-              <input data-name="image" type="text" placeholder="Image URL">
+              <div class="row">
+                <input data-name="form_t" type="text" >
+                <input data-name="form_sn" type="text" >
+              </div>
+              <input data-name="form_u" type="text" required>
+              <input data-name="form_i" type="text" >
             </div>
             <div class="col">
-              <textarea data-name="description" placeholder="Description"></textarea>
+              <textarea data-name="form_d" ></textarea>
             </div>
           </div>
           <div class="row">
-            <button id="generateButton" type="button">Generate URL</button>
+            <button id="generateButton" type="button" data-text="text_btn_generate"></button>
           </div>
         </form>
         <div id="result">
@@ -108,5 +114,7 @@
   <script src="src/js/lib/modal.js"></script>
   <script src="src/js/script.js"></script>
   <script src="src/js/generate.url.js"></script>
+
+
 </body>
 </html>

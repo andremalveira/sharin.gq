@@ -34,6 +34,9 @@
   $description  = $_GET['d'] ?? $_GET['description']  ?? null;
   $image        = $_GET['i'] ?? $_GET['image']        ?? null;
   $site_name    = $_GET['sn'] ?? $_GET['site_name']   ?? urlValidate($url)['host']   ?? null;
+  $type         = $_GET['type']                       ?? null;
+
+
 
 ?>
 <!-- Author: https://github.com/andremalveira -->
@@ -47,16 +50,17 @@
 
   <meta name="description"              content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.';?>">
   <!-- meta to shared --> 
-  <meta property="og:site_name"         content="<?php echo $site_name     ?? 'sharin.gq';?>"> 
+
   <!-- FACEBOOK -->
   <meta property="og:url"               content="<?php echo $url           ?? 'https://sharin.gq';?>">
-  <meta property="og:title"             content="<?php echo $title         ?? 'Sharin';?>">
+  <meta property="og:title"             content="<?php echo $title         ?? 'Custom preview link to share';?>">
   <meta property="og:description"       content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.';?>">
   <meta property="og:image"             content="<?php echo $image         ?? 'getting-starter/src/img/banner.jpg';?>">
-
+  <meta property="og:type"              content="<?php echo $type          ?? 'website';?>">
+  <meta property="og:site_name"         content="<?php echo $site_name     ?? 'sharin.gq';?>"> 
 
   <!-- TWITTER -->
-  <meta name="twitter:title"            content="<?php echo $title         ?? 'Sharin' ;?>">
+  <meta name="twitter:title"            content="<?php echo $title         ?? 'Custom preview link to share' ;?>">
   <meta name="twitter:description"      content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.' ;?>">
   <meta name="twitter:image:src"        content="<?php echo $image         ?? 'getting-starter/src/img/banner.jpg' ;?>">
   <meta name="twitter:card"             content="summary_large_image">

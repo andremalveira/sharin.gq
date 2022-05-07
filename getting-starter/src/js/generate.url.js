@@ -4,10 +4,11 @@ const generated_url = get('generated-url')
 
 generateButton.addEventListener('click', () => {
   let params = {
-    u: get('url').value,
-    t: get('title').value,
-    d: get('description').value,
-    i: get('image').value
+    u: get('form_u').value,
+    t: get('form_t').value,
+    d: get('form_d').value,
+    i: get('form_i').value,
+    sn: get('form_sn').value
   }
 
   if(params.u) {
@@ -39,10 +40,10 @@ generateButton.addEventListener('click', () => {
 
 })
 
-get('url').addEventListener('focus', removeRequired)
+get('form_u').addEventListener('focus', removeRequired)
 function removeRequired(e){
   e.target.classList.remove('required')
-  get('url').removeEventListener('input', removeRequired)
+  get('form_u').removeEventListener('input', removeRequired)
 }
 
 

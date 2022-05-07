@@ -34,6 +34,23 @@ tippy('#IconTranslate', {
   allowHTML: true,
 });
 
+tippy('#Debuggers', {
+  trigger: 'click',
+  interactive: true,
+  content: `
+    <div id="translate-options" >
+      <a href="https://developers.facebook.com/tools/debug/" target="_blank"><i id="FacebookIcon"></i>Facebook</a>
+      <a href="https://cards-dev.twitter.com/validator" target="_blank"><i id="TwitterIcon"></i>Twitter</a>
+      <a href="https://www.linkedin.com/post-inspector/inspect/" target="_blank"><i id="LinkedinIcon"></i>Linkedin</a>
+    </div>
+  `,
+  allowHTML: true,
+  onShown (instance) {
+    svg('LinkedinIcon', icon.LinkedinIcon)
+    svg('FacebookIcon', icon.FacebookIcon)
+    svg('TwitterIcon', icon.TwitterIcon)
+  },
+});
 
 document.querySelector('[data-modal="about"]').addEventListener('click', () => {
   easyModal.open(`

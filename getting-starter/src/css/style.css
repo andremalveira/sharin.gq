@@ -34,6 +34,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 2rem;
 }
 
 #home header .l-side .menu .to-modal {
@@ -108,12 +109,25 @@ body {
   transition: ease 0.2s;
 }
 
-#home header #translate-options span {
+#home header #translate-options :is(span, a) {
   padding: 0.4rem 1rem;
   border-radius: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8rem;
 }
 
-#home header #translate-options span:hover {
+#home header #translate-options :is(span, a) i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#home header #translate-options :is(span, a):hover {
   background: #4184e426;
 }
 
@@ -174,7 +188,7 @@ form.generateurl input.required {
 
 form.generateurl textarea {
   width: 100%;
-  height: 10rem;
+  height: 100%;
 }
 
 form.generateurl input, form.generateurl textarea {
@@ -208,6 +222,10 @@ form.generateurl .col {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
+}
+
+form.generateurl .col .row {
+  padding: 0;
 }
 
 @media (max-width: 420px) {
