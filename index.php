@@ -4,17 +4,19 @@
     $urlIsHttp = false;
     $noHasProtocol = false;
 
-    $scheme = parse_url($url)['scheme'] ?? null;
-    $host = parse_url($url)['host'] ?? null;
-
-
-    if($scheme){
-      if($scheme == 'http'){$urlIsHttp = true;};
-
-    } else {
-      $host = parse_url('https://'.$url)['host'];
-      $noHasProtocol = true;
+    if($url) {
+      $scheme = parse_url($url)['scheme'] ?? null;
+      $host = parse_url($url)['host'] ?? null;
+  
+      if($scheme){
+        if($scheme == 'http'){$urlIsHttp = true;};
+  
+      } else {
+        $host = parse_url('https://'.$url)['host'];
+        $noHasProtocol = true;
+      }
     }
+
 
      return  [
       "url" => $url_valid,
@@ -43,20 +45,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"              content="<?php echo $description   ?? 'Custom preview link to share';?>">
+  <meta name="description"              content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.';?>">
   <!-- meta to shared --> 
   <meta property="og:site_name"         content="<?php echo $site_name     ?? 'sharin.gq';?>"> 
   <!-- FACEBOOK -->
   <meta property="og:url"               content="<?php echo $url           ?? 'https://sharin.gq';?>">
   <meta property="og:title"             content="<?php echo $title         ?? 'Sharin';?>">
-  <meta property="og:description"       content="<?php echo $description   ?? 'Custom preview link to share';?>">
-  <meta property="og:image"             content="<?php echo $image         ?? '';?>">
+  <meta property="og:description"       content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.';?>">
+  <meta property="og:image"             content="<?php echo $image         ?? 'getting-starter/src/img/banner.jpg';?>">
 
 
   <!-- TWITTER -->
   <meta name="twitter:title"            content="<?php echo $title         ?? 'Sharin' ;?>">
-  <meta name="twitter:description"      content="<?php echo $description   ?? 'Custom preview link to share' ;?>">
-  <meta name="twitter:image:src"        content="<?php echo $image         ?? '' ;?>">
+  <meta name="twitter:description"      content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.' ;?>">
+  <meta name="twitter:image:src"        content="<?php echo $image         ?? 'getting-starter/src/img/banner.jpg' ;?>">
   <meta name="twitter:card"             content="summary_large_image">
 
   <title><?php echo $title ?? 'Sharin' ;?></title>
