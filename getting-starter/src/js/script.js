@@ -36,8 +36,8 @@ tippy('#IconTranslate', {
 
 
 document.querySelector('[data-modal="about"]').addEventListener('click', () => {
-
   easyModal.open(`
-  
+    <h1>Sharin.gq</h2>
+    ${text.about}
   `, true)
 })

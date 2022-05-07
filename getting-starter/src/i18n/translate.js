@@ -12,6 +12,10 @@ const translate = {
     table_desc_d: "Descrição da pré visualização",
     table_desc_i: "URL/Link da imagem da pré visualização",
     table_desc_sn: "Nome do site ou url",
+    about: `
+    <p>Em um momento eu precisava compartilhar uma url, mas essa url não tinha metadados em sua página, e como sabemos um bom compartilhamento é quando ela mostra os metadados dessa url, como título, descrição, imagem e nome do site.</p>
+    <p>Por isso criei esta ferramenta gratuita na qual você pode adicionar uma url com título, descrição e imagem e compartilhá-la com uma prévia dessas informações.</p>
+    `
   }, 
   "en-us" : {
     slogan: "Custom preview link to share.",
@@ -26,6 +30,10 @@ const translate = {
     table_desc_d: "Description of preview",
     table_desc_i: "Preview Image URL/Link",
     table_desc_sn: "Site name or URL name",
+    about: `
+    <p>At one point I needed to share a url, but this url had no metadata on its page, and as we know a good share is when it shows the metadata of that url, such as a title, description, image and site name.</p>
+    <p>Because of that I created this free tool in which you can add a url with title, description and image and share it with a preview of this information.</p>
+    `
   }
 }
 
