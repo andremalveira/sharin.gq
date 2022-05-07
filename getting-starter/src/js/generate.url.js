@@ -13,7 +13,7 @@ generateButton.addEventListener('click', () => {
   if(params.u) {
     var queryString = Object.keys(params).map((key) => {
       //params[key] && encodeURIComponent(key) + '=' + encodeURIComponent(params[key])
-      return params[key] && key + '=' + params[key]
+      return params[key] && encodeURIComponent(key) + '=' + encodeURIComponent(params[key])
     }).join('&');
   
     document.querySelector('form.generateurl')

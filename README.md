@@ -8,18 +8,34 @@ Because of that I created this free tool in which you can add a url with title, 
 
 ## How to use
 
-> ### Url Example
+> ### Base URL
 ```js
-https://sharin.gq?url=https://site.com&title=title
+https://sharin.gq
 ```
 
 > ### Parameters
-| Parameters   | Alias  | Meta                     | Description |
+| Parameters   | Alias  | Property                 | Description |
 | ------------ | ------ | ------------------------ | ---------------------------|
-| url=         | u=     | og / twitter:url         | URL/Link you want to share
+| url=         | u=     | og:url                   | URL/Link you want to share
 | title=       | t=     | og / twitter:title       | Preview title
 | description= | d=     | og / twitter:description | Description of preview
 | image=       | i=     | og / twitter:image       | Preview Image URL/Link
+| site_name=   | sn=    | og:site_name             | Site name or URL name
+
+<br/>
+
+> ### Example
+> - See that this url `https://site-no-metadata.com/` when trying to share it doesn't show metadata view, that's because this link doesn't have it.
+
+<p align="center">
+  <img src="getting-starter/src/img/no-mtdt-1.png"/>
+</p>
+
+> - Using sharin, this would be the result:
+
+<p align="center">
+  <img src="getting-starter/src/img/mtdt-1.png"/>
+</p>
 
 
 

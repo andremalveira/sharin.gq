@@ -11,6 +11,7 @@ const translate = {
     table_desc_t: "Título da pré visualização",
     table_desc_d: "Descrição da pré visualização",
     table_desc_i: "URL/Link da imagem da pré visualização",
+    table_desc_sn: "Nome do site ou url",
   }, 
   "en-us" : {
     slogan: "Custom preview link to share.",
@@ -24,6 +25,7 @@ const translate = {
     table_desc_t: "Preview title",
     table_desc_d: "Description of preview",
     table_desc_i: "Preview Image URL/Link",
+    table_desc_sn: "Site name or URL name",
   }
 }
 

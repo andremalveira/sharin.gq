@@ -3,7 +3,7 @@
   $title        = $_GET['t'] ?? $_GET['title']        ?? null;
   $description  = $_GET['d'] ?? $_GET['description']  ?? null;
   $image        = $_GET['i'] ?? $_GET['image']        ?? null;
-  $site_name    = $_GET['sn'] ?? $_GET['site_name']   ?? null;
+  $site_name    = $_GET['sn'] ?? $_GET['site_name']   ?? $url     ?? null;
 
 ?>
 <!-- Author: https://github.com/andremalveira -->
@@ -15,23 +15,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="description"              content="<?php echo $description   ?? 'Custom preview link to share';?>">
   <!-- meta to shared --> 
   <meta property="og:site_name"         content="<?php echo $site_name     ?? 'sharin.gq';?>"> 
   <!-- FACEBOOK -->
   <meta property="og:url"               content="<?php echo $url           ?? 'https://sharin.gq';?>">
-  <meta property="og:title"             content="<?php echo $title         ?? 'Sharing';?>">
+  <meta property="og:title"             content="<?php echo $title         ?? 'Sharin';?>">
   <meta property="og:description"       content="<?php echo $description   ?? 'Custom preview link to share';?>">
   <meta property="og:image"             content="<?php echo $image         ?? '';?>">
 
 
   <!-- TWITTER -->
-  <meta name="twitter:url"              content="<?php echo $url           ?? 'https://sharin.gq' ;?>">
-  <meta name="twitter:title"            content="<?php echo $title         ?? 'Sharing' ;?>">
+  <meta name="twitter:title"            content="<?php echo $title         ?? 'Sharin' ;?>">
   <meta name="twitter:description"      content="<?php echo $description   ?? 'Custom preview link to share' ;?>">
-  <meta name="twitter:image"            content="<?php echo $image         ?? '' ;?>">
+  <meta name="twitter:image:src"        content="<?php echo $image         ?? '' ;?>">
+  <meta name="twitter:card"             content="summary_large_image">
 
-
-  <title><?php echo $title;?></title>
+  <title><?php echo $title ?? 'Sharin' ;?></title>
   <script>window.location.replace('<?php echo $url ?? '/getting-starter';?>')</script>
 
   <link rel="stylesheet" href="getting-starter/src/css/loading.css">
