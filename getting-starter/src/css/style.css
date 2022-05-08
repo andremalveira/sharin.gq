@@ -228,6 +228,18 @@ form.generateurl .col .row {
   padding: 0;
 }
 
+form.generateurl .input-error {
+  font-size: 0.9rem;
+  color: var(--cyan);
+}
+
+form.generateurl .input-error span {
+  padding-top: 0.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 420px) {
   form.generateurl .row {
     -webkit-box-orient: vertical;
@@ -237,7 +249,7 @@ form.generateurl .col .row {
   }
 }
 
-button[type="button"] {
+button[type="button"], button[type="submit"] {
   cursor: pointer !important;
   -webkit-transition: ease 0.2s;
   transition: ease 0.2s;
@@ -252,18 +264,18 @@ button[type="button"] {
   min-width: 5rem;
 }
 
-button[type="button"]:hover {
+button[type="button"]:hover, button[type="submit"]:hover {
   background-color: var(--btn-second-hover);
   -webkit-box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
           box-shadow: 0px 0px 0px 2px var(--btn-second-border-hover);
 }
 
-button[type="button"]:active {
+button[type="button"]:active, button[type="submit"]:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
 
-button[type="button"].info {
+button[type="button"].info, button[type="submit"].info {
   background: var(--bg-info);
   -webkit-box-shadow: 0px 0px 0px 2px var(--bg-info-border);
           box-shadow: 0px 0px 0px 2px var(--bg-info-border);
@@ -310,6 +322,12 @@ textarea[data-name="generated-url"] {
 textarea[data-name="generated-url"]:focus {
   -webkit-box-shadow: 0px 0px 0px 2px var(--bg-info-border);
           box-shadow: 0px 0px 0px 2px var(--bg-info-border);
+}
+
+@media (max-width: 420px) {
+  textarea[data-name="generated-url"] {
+    min-height: 10rem;
+  }
 }
 
 footer {

@@ -70,15 +70,18 @@
                 <input data-name="form_t" type="text" >
                 <input data-name="form_sn" type="text" >
               </div>
-              <input data-name="form_u" type="text" required>
+              <div id="urlInput">
+                <input data-name="form_u" type="text" required>
+                <div class="input-error"></div>
+              </div>
               <input data-name="form_i" type="text" >
             </div>
             <div class="col">
               <textarea data-name="form_d" ></textarea>
             </div>
           </div>
-          <div class="row">
-            <button id="generateButton" type="button" data-text="text_btn_generate"></button>
+          <div class="row" style="padding-bottom: 0;">
+            <button id="generateButton" type="submit" data-text="text_btn_generate"></button>
           </div>
         </form>
         <div id="result">
