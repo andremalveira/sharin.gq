@@ -1,6 +1,6 @@
 const translate = {
   "pt-br" : {
-    slogan: "Link de visualização personalizado.",
+    slogan: "Pré visualização de link personalizado.",
     text_url_example: "Exemplo da URL",
     text_about: "Sobre",
     text_debuggers: "Depuradores de Links",

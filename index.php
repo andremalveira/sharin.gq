@@ -49,24 +49,24 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" href="getting-starter/src/img/favicon.png" type="image/x-icon">
 
-  <meta name="description"              content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.';?>">
+  <meta name="description"              content="<?php echo $description   ?? 'Compartilhe seus links sem metadados com o sharin, com ele você adiciona metadados personalizados para mostrar na visualização do seu link.';?>">
   <!-- meta to shared --> 
 
   <!-- FACEBOOK -->
   <meta property="og:url"               content="<?php echo $url           ?? 'https://sharin.gq';?>">
-  <meta property="og:title"             content="<?php echo $title         ?? 'Custom preview link to share';?>">
-  <meta property="og:description"       content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.';?>">
+  <meta property="og:title"             content="<?php echo $title         ?? 'Pré visualização de link personalizado';?>">
+  <meta property="og:description"       content="<?php echo $description   ?? 'Compartilhe seus links sem metadados com o sharin, com ele você adiciona metadados personalizados para mostrar na visualização do seu link.';?>">
   <meta property="og:image"             content="<?php echo $image         ?? 'https://sharin.gq/getting-starter/src/img/banner.jpg';?>">
   <meta property="og:type"              content="<?php echo $type          ?? 'website';?>">
   <meta property="og:site_name"         content="<?php echo $site_name     ?? 'sharin.gq';?>"> 
 
   <!-- TWITTER -->
-  <meta name="twitter:title"            content="<?php echo $title         ?? 'Custom preview link to share' ;?>">
-  <meta name="twitter:description"      content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.' ;?>">
+  <meta name="twitter:title"            content="<?php echo $title         ?? 'Pré visualização de link personalizado' ;?>">
+  <meta name="twitter:description"      content="<?php echo $description   ?? 'Compartilhe seus links sem metadados com o sharin, com ele você adiciona metadados personalizados para mostrar na visualização do seu link.' ;?>">
   <meta name="twitter:image:src"        content="<?php echo $image         ?? 'https://sharin.gq/getting-starter/src/img/banner.jpg' ;?>">
   <meta name="twitter:card"             content="summary_large_image">
 
-  <title><?php echo $title ?? 'Sharin | Custom preview link to share' ;?></title>
+  <title><?php echo $title ?? 'Sharin | Pré visualização de link personalizado' ;?></title>
   
   <link rel="stylesheet" href="index.style.css">
   <link rel="stylesheet" href="getting-starter/src/css/loading.css">
