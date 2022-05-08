@@ -55,7 +55,7 @@ const translate = {
 
 
 
-let text = translate['en-us']
+let text = translate['pt-br']
 
 let langls = localStorage.getItem('lang')
 if(langls) {
