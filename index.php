@@ -56,14 +56,14 @@
   <meta property="og:url"               content="<?php echo $url           ?? 'https://sharin.gq';?>">
   <meta property="og:title"             content="<?php echo $title         ?? 'Custom preview link to share';?>">
   <meta property="og:description"       content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.';?>">
-  <meta property="og:image"             content="<?php echo $image         ?? 'getting-starter/src/img/banner.jpg';?>">
+  <meta property="og:image"             content="<?php echo $image         ?? 'https://sharin.gq/getting-starter/src/img/banner.jpg';?>">
   <meta property="og:type"              content="<?php echo $type          ?? 'website';?>">
   <meta property="og:site_name"         content="<?php echo $site_name     ?? 'sharin.gq';?>"> 
 
   <!-- TWITTER -->
   <meta name="twitter:title"            content="<?php echo $title         ?? 'Custom preview link to share' ;?>">
   <meta name="twitter:description"      content="<?php echo $description   ?? 'Share your links without metadata with sharin, with it you add custom metadata to show in your link preview.' ;?>">
-  <meta name="twitter:image:src"        content="<?php echo $image         ?? 'getting-starter/src/img/banner.jpg' ;?>">
+  <meta name="twitter:image:src"        content="<?php echo $image         ?? 'https://sharin.gq/getting-starter/src/img/banner.jpg' ;?>">
   <meta name="twitter:card"             content="summary_large_image">
 
   <title><?php echo $title ?? 'Sharin | Custom preview link to share' ;?></title>
@@ -74,7 +74,7 @@
 </head>
   <body>
   <?php if(!urlValidate($url)['urlIsHttp'] && !urlValidate($url)['noHasProtocol']){ 
-      //echo'<script>window.location.replace(\''.($url ?? '/getting-starter').' \')</script>';
+      echo'<script>window.location.replace(\''.($url ?? '/getting-starter').' \')</script>';
       echo 
       '<div id="loading">
           <svg class="spinner" viewBox="0 0 50 50">
