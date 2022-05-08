@@ -9,6 +9,8 @@ body {
   margin: 0;
   padding: 2rem;
   box-sizing: border-box;
+  background: #151515;
+  color: #adbac7;
 }
 
 .warning {
@@ -17,7 +19,7 @@ body {
   max-width: 25rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 0px 1px #dbdcdd;
+  box-shadow: 0px 0px 0px 1px #444444;
 }
 
 .warning i.icon {

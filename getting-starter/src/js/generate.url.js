@@ -1,15 +1,18 @@
 const get = (name) => document.querySelector(`[data-name='${name}']`)
 
 const form = document.querySelector('form.generateurl')
+const params = new Object();
 
 const GenerateUrl = () => {
-  let params = {
-    u: get('form_u').value,
-    t: get('form_t').value,
-    d: get('form_d').value,
-    i: get('form_i').value,
-    sn: get('form_sn').value
+  let inputs = {
+    u: get('form_u').value ?? null,
+    t: get('form_t').value ?? null,
+    d: get('form_d').value ?? null,
+    i: get('form_i').value ?? null,
+    sn: get('form_sn').value ?? null
   }
+
+  Object.keys(inputs).filter(e => inputs[e] ? params[e] = inputs[e] : null)
 
   if(params.u) {
     if(!params.u.includes('https')){
@@ -17,9 +20,8 @@ const GenerateUrl = () => {
       addRequired({httpsRequire: true})
     } else {
       var queryString = Object.keys(params).map((key) => {
-        //params[key] && encodeURIComponent(key) + '=' + encodeURIComponent(params[key])
   
-        if(params[key] && (key == 't' || key == 'd')){
+        if(params[key] && (key == 't' || key == 'd' || key == 'sn')){
           return key + '=' + params[key].replaceAll(' ' , '%20')
         }
   
@@ -37,7 +39,7 @@ const GenerateUrl = () => {
 
   } else {
     addRequired()
-  }
+  } 
 }
 
 

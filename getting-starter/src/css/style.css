@@ -230,7 +230,7 @@ form.generateurl .col .row {
 
 form.generateurl .input-error {
   font-size: 0.9rem;
-  color: var(--cyan);
+  color: var(--font-third);
 }
 
 form.generateurl .input-error span {

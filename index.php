@@ -3,11 +3,10 @@
     $url_valid = $url;
     $urlIsHttp = false;
     $noHasProtocol = false;
+    $scheme = parse_url($url)['scheme'] ?? null;
+    $host = parse_url($url)['host'] ?? null;
 
     if($url) {
-      $scheme = parse_url($url)['scheme'] ?? null;
-      $host = parse_url($url)['host'] ?? null;
-  
       if($scheme){
         if($scheme == 'http'){$urlIsHttp = true;};
   
@@ -67,7 +66,7 @@
   <meta name="twitter:image:src"        content="<?php echo $image         ?? 'getting-starter/src/img/banner.jpg' ;?>">
   <meta name="twitter:card"             content="summary_large_image">
 
-  <title><?php echo $title ?? 'Sharin' ;?></title>
+  <title><?php echo $title ?? 'Sharin | Custom preview link to share' ;?></title>
   
   <link rel="stylesheet" href="index.style.css">
   <link rel="stylesheet" href="getting-starter/src/css/loading.css">
