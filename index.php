@@ -74,7 +74,7 @@
 </head>
   <body>
   <?php if(!urlValidate($url)['urlIsHttp'] && !urlValidate($url)['noHasProtocol']){ 
-      echo'<script>window.location.replace(\''.($url ?? '/getting-starter').' \')</script>';
+      //echo'<script>window.location.replace(\''.($url ?? '/getting-starter').' \')</script>';
       echo 
       '<div id="loading">
           <svg class="spinner" viewBox="0 0 50 50">
